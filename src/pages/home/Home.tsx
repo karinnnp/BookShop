@@ -19,7 +19,7 @@ export const Home = (): ReactElement => {
   }, [search.text])
 
   return (
-    <div className='h-screen pt-4'>
+    <div className='h-screen pt-4 mb-20'>
       <div className='w-full grid justify-center gap-2 max-sm:grid-cols-2 sm:grid-cols-3  md:grid-cols-4'>
         {data.map((p, i) => {
           return (
