@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { HomeIcon, MemberIcon, NoteIcon, NotificationIcon } from "../assets/icon";
+import { HomeIcon, NoteIcon, NotificationIcon } from "../assets/icon";
 
 let path: string = ''
 
@@ -10,7 +10,7 @@ export const MenuFooter: React.ElementType = () => {
 
     return (
         <>
-            {(path === "/" || path === "/order" || path === "/notification" || path === "/profile") &&
+            {(path === "/" || path === "/order" || path === "/notification") &&
                 <div className="w-full h-[68px] bg-white shadow-[0px_1px_6px_rgba(0,0,0,0.6)] fixed bottom-0">
                     <div className="w-full h-full sm:container sm:mx-auto sm:w-[1024px] grid grid-cols-3 text-xs">
                         <div className={`${card} ${path === "/" ? "text-red" : "text-grey-dark"} relative`} onClick={() => window.location.href = '/'}>
@@ -26,11 +26,6 @@ export const MenuFooter: React.ElementType = () => {
                         <div className={`${card} ${path === "/notification" ? "text-red" : "text-grey-dark"} relative`} onClick={() => window.location.href = '/notification'}>
                             {path === "/notification" && <div className={line}></div>}
                             <NotificationIcon className={`h-6 ${path === "/notification" ? "fill-red" : "fill-grey-dark"}`} />การแจ้งเตือน
-                        </div>
-
-                        <div className={`${card} ${path === "/profile" ? "text-red" : "text-grey-dark"} relative`} onClick={() => window.location.href = '/profile'}>
-                            {path === "/profile" && <div className={line}></div>}
-                            <MemberIcon className={`h-6 ${path === "/profile" ? "fill-red" : "fill-grey-dark"}`} />บัญชี
                         </div>
                     </div>
                 </div>

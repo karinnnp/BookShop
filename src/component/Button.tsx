@@ -64,7 +64,7 @@ export const ButtonM: React.FC<ButtonProps> = ({
   handleClick,
 }) => {
   const className = `h-[46px] py-2.5 text-lg cursor-pointer flex ${BTN} ${BUTTON_STYLES[bgStyle]}`;
-  const titleDetail = `mx-1 text-base font-medium `;
+  const titleDetail = `mx-1 text-base font-medium w-full`;
   return (
     <>
       <button className={className} onClick={handleClick} disabled={disabled}>
